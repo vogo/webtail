@@ -15,7 +15,7 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
 	"github.com/gorilla/websocket"
-	"github.com/prateeknischal/webtail/util"
+	"github.com/vogo/webtail/util"
 )
 
 var (

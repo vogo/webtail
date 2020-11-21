@@ -1,6 +1,6 @@
 # Webtail
 
-[![](https://goreportcard.com/badge/github.com/prateeknischal/webtail)](https://goreportcard.com/report/github.com/prateeknischal/webtail)
+[![](https://goreportcard.com/badge/github.com/vogo/webtail)](https://goreportcard.com/report/github.com/vogo/webtail)
 
 ### Yet another browser based remote log viewer written in Golang
 
@@ -45,7 +45,7 @@ This will run the server on port 15000 and recursively look for files in `/var/l
 ```
 This will add an authentication layer over it. Once you navigate to the home page, it will redirect to the `/login` page and ask for username and password. Since this is supposed to be as generic as possible, hence it uses PAM authentication to authenticate the user. You need to provide the credentials that you would use to login to the host on which the server is hosted. Right now it would only authenticate via PAM if only a single step is required.
 
-For this it uses [CGO](https://github.com/golang/go/wiki/cgo). A basic starting point for this would be [Calling Go functions from C](https://medium.com/using-go-in-mobile-apps/using-go-in-mobile-apps-part-1-calling-go-functions-from-c-be1ecf7dfbc6). This also has information on how to call C funtions from Golang, which is what is being used in this module. It is performing PAM authentication using the `passwd` service in [pam_auth.go](https://github.com/prateeknischal/webtail/blob/master/util/pam_auth.go).
+For this it uses [CGO](https://github.com/golang/go/wiki/cgo). A basic starting point for this would be [Calling Go functions from C](https://medium.com/using-go-in-mobile-apps/using-go-in-mobile-apps-part-1-calling-go-functions-from-c-be1ecf7dfbc6). This also has information on how to call C funtions from Golang, which is what is being used in this module. It is performing PAM authentication using the `passwd` service in [pam_auth.go](https://github.com/vogo/webtail/blob/master/util/pam_auth.go).
 
 This contains the code to interact with the system's PAM and check if a username/password combination is valid or not.
 
